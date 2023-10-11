@@ -2,7 +2,7 @@
 
 Este repositório é uma solução para o desafio front-end proposto. O projeto consiste em um formulário para cadastro de fornecedores e produtos.
 
-## Recursos Utilizados
+## 🚀 Recursos Utilizados
 
 - **HTML**: Versão 5
 - **JavaScript**: ECMA-6+
@@ -13,6 +13,6 @@ Este repositório é uma solução para o desafio front-end proposto. O projeto 
 - **Mustache JS**: Versão 2.3.2
 - **fluig-style-guide**
 
-## Contato
+## 📧 Contato
 
 - **Email**: Luccalobo.goncalves@gmail.com

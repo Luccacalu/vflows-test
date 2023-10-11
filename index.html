@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VFlows</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/fluig-style-guide.min.css">
+
+    <!-- CSS Files -->
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/fornecedor.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/anexos.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/produtos.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/fluig-style-guide.min.css">
+    <link rel="stylesheet" type="text/css" href="/components/fornecedor/fornecedor.css">
+    <link rel="stylesheet" type="text/css" href="/components/anexos/anexos.css">
+    <link rel="stylesheet" type="text/css" href="/components/produtos/produtos.css">
+
+    <!-- JS Files -->
     <script src="/assets/js/jquery.js"></script>
     <script src="/assets/js/jquery-ui.min.js"></script>
     <script src="/assets/js/mustache-min.js"></script>
     <script src="/assets/js/fluig-style-guide.min.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/components/fornecedor/fornecedor.js"></script>
+    <script src="/components/anexos/anexos.js"></script>
+    <script src="/components/produtos/produtos.js"></script>
+    
 </head>
 <body>
-    <div class="fluig-style-guide">
+    <main class="fluig-style-guide">
         <h1 class="fs-color-black fs-text-center">CADASTRO FORNECEDOR/PRODUTO</h1>
-        <div id="fornecedor-section"></div>
-        <div id="produtos-section"></div>
-        <div id="anexos-section"></div>
+        <section class="component" id="fornecedor-section"></section>
+        <section class="component" id="produtos-section"></section>
+        <section class="component" id="anexos-section"></section>
         <button type="button" class="btn btn-success fs-full-width">Salvar Fornecedor</button>
-    </div>
+    </main>
 </body>
 </html>
