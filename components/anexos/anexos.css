@@ -4,7 +4,7 @@
     position: relative;
     border: 2px solid #000;
     padding: 20px;
-    margin-top: 20px;
+    margin: 20px 0;
     flex-grow: 1;
     border-radius: 10px;
 }
@@ -22,6 +22,7 @@
 .anexo-card {
     display: flex;
     align-items: center;
+    margin: 10px 0;
 }
 
 .anexo-card .trash-container {

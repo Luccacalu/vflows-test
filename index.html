@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VFlows</title>
 
-    <!-- CSS Files -->
+    <!-- Arquivos CSS -->
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/fluig-style-guide.min.css">
     <link rel="stylesheet" type="text/css" href="/components/fornecedor/fornecedor.css">
     <link rel="stylesheet" type="text/css" href="/components/anexos/anexos.css">
     <link rel="stylesheet" type="text/css" href="/components/produtos/produtos.css">
 
-    <!-- JS Files -->
+    <!-- Arquivos JavaScript -->
     <script src="/assets/js/jquery.js"></script>
     <script src="/assets/js/jquery-ui.min.js"></script>
     <script src="/assets/js/mustache-min.js"></script>
@@ -22,11 +22,18 @@
 </head>
 <body>
     <main class="fluig-style-guide">
-        <h1 class="fs-color-black fs-text-center">CADASTRO FORNECEDOR/PRODUTO</h1>
+        <h1 class="fs-color-black fs-text-center fs-md-margin-bottom">CADASTRO FORNECEDOR/PRODUTO</h1>
         <section class="component" id="fornecedor-section"></section>
         <section class="component" id="produtos-section"></section>
         <section class="component" id="anexos-section"></section>
-        <button type="button" id="save-button" class="btn btn-success fs-full-width">Salvar Fornecedor</button>
+        <div class="alert alert-danger" role="alert" id="alert-message" style="display:none;">
+            <button type="button" id="close-alert-button" class="close">
+                <span aria-hidden="true">×</span>
+                <span class="sr-only">Close</span>
+            </button>
+            <span id="alert-content"></span>
+        </div>
+        <button type="button" id="save-button" class="btn btn-success fs-full-width fs-md-margin-bottom">Salvar Fornecedor</button>
     </main>
 </body>
 </html>

@@ -7,13 +7,18 @@
     </div>
     
     <div class="container-border">
-        <span class="container-label">Produto - 1</span>
+
+        <span class="container-label">Produto</span>
+
         <div class="container-content">
+
             <div class="icon-container">
                 <img src="/assets/images/product-icon.png">
             </div>
+
             <div class="forms-container">
                 <form role="form">
+
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
@@ -22,35 +27,46 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="Pmedida">UND. Medida</label>
-                                <input type="text" class="form-control" id="Pmedida">
+                                <select class="form-control" id="Pmedida">
+                                    <option value="unidade">unidade</option>
+                                    <option value="kg">kg</option>
+                                    <option value="g">g</option>
+                                    <option value="m">m</option>
+                                    <option value="cm">cm</option>
+                                    <option value="l">l</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label for="Pproduto">QTDE. em Estoque</label>
-                                <input type="text" class="form-control" id="Pproduto">
+                                <label for="Pestoque">QTDE. em Estoque</label>
+                                <input type="text" class="form-control" id="Pestoque">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label for="Pproduto">Valor Unitário</label>
-                                <input type="text" class="form-control" id="Pproduto">
+                                <label for="PvalorUnit">Valor Unitário</label>
+                                <input type="text" class="form-control" id="PvalorUnit">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label for="Pproduto">Valor Total</label>
-                                <input disabled type="text" class="form-control" id="Pproduto">
+                                <label for="PvalorTotal">Valor Total</label>
+                                <input disabled type="text" class="form-control" id="PvalorTotal">
                             </div>
                         </div>
                     </div>
+
                 </form>
             </div>
+
         </div>
+        
     </div>
 
 </div>
