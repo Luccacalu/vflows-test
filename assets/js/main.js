@@ -9,7 +9,14 @@ $("document").ready(function() {
 
         // Coletar todos os dados dos componentes e gerar o JSON
         $('#save-button').click(function() {
-            processData();
+            try {
+                if (validateRequiredFields()) {
+                    processData();
+                }
+            } catch (error) {
+                console.error("Erro ao processar os dados: ", error);
+                showError("Ocorreu um erro ao processar os dados. Por favor, verifique os campos e tente novamente.");
+            }
         });
 
         // Fechar o alerta
@@ -23,6 +30,35 @@ $("document").ready(function() {
     }
 
 });
+
+// Função para conferir se os campos obrigatórios foram preenchidos
+function validateRequiredFields() {
+
+    // Campos obrigatórios
+    var requiredFields = [
+        { fieldId: '#FrazaoSocial', label: 'Razão Social' },
+        { fieldId: '#FnomeFantasia', label: 'Nome Fantasia' },
+        { fieldId: '#FCNPJ', label: 'CNPJ' },
+        { fieldId: '#Fendereco', label: 'Endereço' },
+        { fieldId: '#FnomePessoaContato', label: 'Nome da Pessoa de Contato' },
+        { fieldId: '#Ftelefone', label: 'Telefone' },
+        { fieldId: '#Femail', label: 'E-mail' }
+    ];
+
+    // Verificar se os campos obrigatórios foram preenchidos
+    for (var i = 0; i < requiredFields.length; i++) {
+        var fieldInfo = requiredFields[i];
+        var fieldId = fieldInfo.fieldId;
+        var fieldValue = $(fieldId).val().trim();
+
+        if (fieldValue === '') {
+            showError(fieldInfo.label + ' é obrigatório.');
+            return false;
+        }
+    }
+
+    return true;
+}
 
 // Função para coletar os dados dos componentes e gerar o JSON
 function processData() {
