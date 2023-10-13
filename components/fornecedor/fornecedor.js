@@ -152,12 +152,3 @@ function setFieldsDisabledState(isDisabled) {
     $("#Fmunicipio").prop('disabled', isDisabled);
     $("#Festado").prop('disabled', isDisabled);
 }
-
-// Função para chamar toast de erro
-function showError(message) {
-    FLUIGC.toast({
-        title: 'Erro:',
-        message: message,
-        type: 'danger'
-    });
-}

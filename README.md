@@ -27,3 +27,4 @@ O projeto **vflows-test** foi criado como resposta ao desafio front-end proposto
 
 - **Live Server**: Foi utilizada a extensão do VS Code "Live Server" para rodar o aplicativo. É necessário para localmente o programa poder fazer o chamado de componentes e outros recursos via Ajax com jQuery.
 - **Blob no JSON final**: Por padrão, o blob dos anexos não é mostrado no JSON final ao salvar fornecedor. Essa decisão foi tomada para melhor legibilidade do JSON final, pois cada blob ocupa dezenas de linhas. No entanto, é possível mostrá-lo facilmente no JSON final apenas descomentando a linha 100 do arquivo assets/js/main.js.
+- **Utilitário de Toast**: em util/errorToast.js há a declaração global da função showError, que chama um toast de erro do fluig-style-guide. A função showError() é utilizada em várias seções dos arquivos .js para mostrar o erro em toast para o usuário.

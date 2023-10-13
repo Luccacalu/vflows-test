@@ -19,11 +19,7 @@ $("document").ready(function() {
 
     } catch (error) {
         console.error("Ocorreu um erro: ", error);
-        FLUIGC.toast({
-            title: 'Erro:',
-            message: 'Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.',
-            type: 'danger'
-        });
+        showError("Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.");
     }
 
 });
@@ -47,11 +43,7 @@ function processData() {
             }
     
             if (errorMessage) {
-                FLUIGC.toast({
-                    title: 'Atenção:',
-                    message: errorMessage,
-                    type: 'danger'
-                });
+                showError(errorMessage);
                 return;
             }
     
@@ -116,11 +108,7 @@ function processData() {
 
     } catch (error) {
         console.error("Erro ao processar os dados: ", error);
-        FLUIGC.toast({
-            title: 'Erro:',
-            message: 'Ocorreu um erro ao processar os dados. Por favor, verifique os campos e tente novamente.',
-            type: 'danger'
-        });
+        showError("Ocorreu um erro ao processar os dados. Por favor, verifique os campos e tente novamente.");
     }
 }
 

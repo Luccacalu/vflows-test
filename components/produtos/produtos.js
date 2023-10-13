@@ -72,11 +72,7 @@ function addNewProduct() {
         });
     } catch (error) {
         console.error("Erro ao adicionar produto: ", error);
-        FLUIGC.toast({
-            title: 'Erro: ',
-            message: 'Ocorreu um erro ao adicionar o produto. Tente novamente.',
-            type: 'danger'
-        });
+        showError("Ocorreu um erro ao adicionar o produto. Tente novamente.");
     }
 }
 
@@ -87,10 +83,6 @@ function removeProduct() {
         produtoCard.remove();
     } catch (error) {
         console.error("Erro ao remover produto: ", error);
-        FLUIGC.toast({
-            title: 'Erro: ',
-            message: 'Ocorreu um erro ao remover o produto. Tente novamente.',
-            type: 'danger'
-        });
+        showError("Ocorreu um erro ao remover o produto. Tente novamente.");
     }
 }

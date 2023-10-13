@@ -28,11 +28,7 @@ function handleFileSelection(event) {
 
     } catch (error) {
         console.error("Erro ao adicionar anexo: ", error);
-        FLUIGC.toast({
-            title: 'Erro:',
-            message: 'Ocorreu um erro ao adicionar o anexo. Tente novamente.',
-            type: 'danger'
-        });
+        showError("Ocorreu um erro ao adicionar o anexo. Tente novamente.");
     }
 }
 
@@ -69,11 +65,7 @@ function removeAnnex() {
 
     } catch (error) {
         console.error("Erro ao remover anexo: ", error);
-        FLUIGC.toast({
-            title: 'Erro:',
-            message: 'Ocorreu um erro ao remover o anexo. Tente novamente.',
-            type: 'danger'
-        });
+        showError("Ocorreu um erro ao remover o anexo. Tente novamente.");
     }
 }
 
@@ -95,11 +87,7 @@ function downloadAnnex() {
         }
     } catch (error) {
         console.error("Erro ao fazer download do anexo: ", error);
-        FLUIGC.toast({
-            title: 'Erro:',
-            message: 'Ocorreu um erro ao baixar o anexo. Tente novamente.',
-            type: 'danger'
-        });
+        showError("Ocorreu um erro ao fazer download do anexo. Tente novamente.");
     }
 }
 
@@ -114,10 +102,6 @@ function base64toBlob(base64, type) {
         return new Blob([new Uint8Array(array)], {type: type});
     } catch (error) {
         console.error("Erro ao converter base64 para Blob: ", error);
-        FLUIGC.toast({
-            title: 'Erro:',
-            message: 'Ocorreu um erro na conversão de dados. Tente novamente.',
-            type: 'danger'
-        });
+        showError("Ocorreu um erro ao converter base64 para Blob. Tente novamente.");
     }
 }
